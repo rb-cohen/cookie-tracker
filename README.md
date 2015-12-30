@@ -7,6 +7,14 @@ The history is stored in the browsers local storage - so a modern (IE9+) browser
 
 Using a custom data source it is possible to track changes to any data, not just cookies. See #HttpOnly Cookies for more info.
 
+## Demos
+
+Using whatever cookies are already set in your browser:
+http://www.arronwoods.com/cookie-tracker/
+
+Using a PHP script to fake changes to the data at random (every 3rd refresh roughly):
+http://www.arronwoods.com/cookie-tracker/volatile.html
+
 ## Getting started
 
 ### 1. Installation
