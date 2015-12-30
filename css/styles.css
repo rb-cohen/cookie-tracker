@@ -1,0 +1,41 @@
+html, body{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    margin: 5px;
+}
+
+#comparison{
+    font-size: 1.6em;
+    text-align: center;
+}
+
+.container{
+    float: left;
+    width: 49%;
+    min-width: 250px;
+    margin: 5px;
+}
+
+.label{
+    font-weight: 800;
+    border-bottom: 2px #999999 solid;
+    margin-top: 15px;
+}
+
+.success--text{
+    color: green;
+}
+
+.warning--text{
+    color: darkorange;
+}
+
+.error--text{
+    color: red;
+}
+
+pre {outline: 1px solid #ccc; padding: 5px; }
+.string { color: green; }
+.number { color: darkorange; }
+.boolean { color: blue; }
+.null { color: magenta; }
+.key { color: red; }

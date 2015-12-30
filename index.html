@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset='utf-8'>
+        <title>Cookie tracker</title>
+
+        <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen">
+
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="js/handlebars-v4.0.5.js"></script>
+        <script src="js/jstorage.js"></script>
+        <script src="js/js.cookie.js"></script>
+        <script src="js/history.js"></script>
+        <script src="js/index.js"></script>
+        <script>
+            $(function(){
+                var history = new CookieHistory({
+                    url: null, // source the data to track from a JSON url (e.g. http://example.com/session_cookies.php)
+                    filter: null, // only track certain cookies, using regular expression (.e.g. '^_ga$')
+                    onDataSuccess: function(){
+                        renderIndex(this);
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+
+        <div id="comparison">
+            Loading...
+        </div>
+
+        <div class="container">
+            <h2>Current</h2>
+            <div id="current"></div>
+        </div>
+
+        <div class="container">
+            <h2>History</h2>
+            <div id="history">
+                <p>No history available, is this the first time you've been here?</p>
+            </div>
+
+            <input type="button" id="wipe" value="Wipe cookie history" />
+        </div>
+
+        <script type="text/html" id="entry-template">
+            <div class="entry">
+                <div class="label">Date</div>
+                <div class="date">{{ date }}</div>
+
+                <div class="label">Data</div>
+                <div class="data">
+                    <pre>{{{prettyJson data}}}</pre>
+                </div>
+
+                <div class="repeats">
+                    <div class="label">Seen before</div>
+                    <ol class="repeats-list"></ol>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/html" id="current-template">
+            <div class="entry">
+                <div class="label">Date</div>
+                <div class="date">{{ date }}</div>
+
+                <div class="label">Data</div>
+                <div class="data">
+                    <pre>{{{prettyJson data}}}</pre>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/html" id="repeat-template">
+            <li>{{ date }}</li>
+        </script>
+    </body>
+</html>
