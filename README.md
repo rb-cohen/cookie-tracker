@@ -9,11 +9,11 @@ Using a custom data source it is possible to track changes to any data, not just
 
 ## Demos
 
-Using whatever cookies are already set in your browser:
 http://www.arronwoods.com/cookie-tracker/
+> Using whatever cookies are already set in your browser
 
-Using a PHP script to fake changes to the data at random (every 3rd refresh roughly):
 http://www.arronwoods.com/cookie-tracker/volatile.html
+> Using a PHP script to fake changes to the data at random (every 3rd refresh roughly)
 
 ## Getting started
 
