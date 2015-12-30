@@ -36,7 +36,7 @@ html, body{
 pre {
     outline: 1px solid #ccc;
     padding: 5px;
-    scroll: auto;
+    overflow: auto;
 }
 
 .string { color: green; }
